@@ -1,0 +1,67 @@
+<br><br>
+
+<div class="container-fluid " *ngIf="!sellersignin">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6 mx-auto register ">
+            <div class="container my-5 ">
+              <div class="card">
+                <div class="card-head">
+                    <h2 class="text-center my-3">SIGN UP FORM (REGISTRATION)</h2>
+                </div>
+                <hr>
+                <div class="card-body">
+                    <form action="" [formGroup]="register">
+                        <label for="" class="form-label">NAME:</label>
+                        <input type="text" class="form-control my-2" formControlName="name" placeholder="enter your name">
+                        <label for="" class="form-label">PASSWORD:</label>
+                        <input type="password" class="form-control my-2" formControlName="password" placeholder="enter your password">
+                        <label for="" class="form-label">EMAIL:</label>
+                        <input type="email" class="form-control my-2" formControlName="email" placeholder="enter your email">
+                        <div class="row">
+                            <div class="col-3 mx-auto">
+                                <button type="button" class="btn btn-primary" (click)="addseller(register)">Signup</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <span><span>Already have an account?<a (click)="loginenter()" class="text-primary">click here</a> for Login</span></span>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid " *ngIf="sellersignin">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6 mx-auto login">
+            <div class="container my-5 ">
+              <div class="card">
+                <div class="card-head">
+                    <h2 class="text-center my-3">SIGN IN FORM (LOGIN)</h2>
+                </div><hr>
+                <div class="card-body">
+                    <form action="" [formGroup]="login">
+                        <label for="" class="form-label">NAME:</label>
+                        <input type="text" class="form-control my-2" formControlName="name" placeholder="enter your name">
+                        <label for="" class="form-label">PASSWORD:</label>
+                        <input type="password" class="form-control my-2" formControlName="password" placeholder="enter your password">
+                        <div class="row">
+                            <div class="col-3 mx-auto">
+                                <button type="button" class="btn btn-primary" (click)="loginseller(login)">Signin</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <span><span>Don't have an account?<a (click)="registenter()"  class="text-primary">click here</a> for signup</span></span>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

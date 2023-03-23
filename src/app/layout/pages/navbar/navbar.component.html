@@ -1,0 +1,29 @@
+
+<mat-toolbar class=" navbar-expand-md" color="basic">
+   <mat-toolbar-row >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 col-md-4 col-lg-7 m-auto ">
+                    <button mat-icon-button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynavbar"><mat-icon>menu</mat-icon></button>
+                    <a  class="" color="Basic" >
+                      <span >E-commerce:)</span>
+                    </a>
+            </div>
+            <div class="col-sm-10 col-md-8 col-lg-5 size ">
+                <mat-form-field class=" width" appearance="fill">
+                    <mat-label>search</mat-label>
+                       <input matInput class="" >
+                       <mat-icon matSuffix><a href="" class="text-decoration-none"> search </a></mat-icon>
+              </mat-form-field>
+            </div>
+        </div>
+       </div>
+   </mat-toolbar-row>
+      <mat-toolbar-row class="navbar-collapse collapse justify-content-center h-50" id="mynavbar">
+          <a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="home">HOME</a>
+          <a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" href="seller">SELLER</a>
+          <!-- <a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" href="selleraccount">SELAcc</a> -->
+          <a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" href="usersignin">LOGIN/SIGNUP</a>
+          <a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button matBadge="0" matBadgeColor="warn" color="basic" href="cart">CART</a>
+      </mat-toolbar-row>
+    </mat-toolbar>
