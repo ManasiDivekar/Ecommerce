@@ -28,12 +28,12 @@ this.seller.postseller(data.value).subscribe((res)=>{
 })
  }
 
-loginseller(data:FormGroup){
-  this.seller.postseller(data.value).subscribe((res)=>{
-    console.log(res);
-  swal("login successful !","success");
-  })
-}
+// loginseller(data:FormGroup){
+//   this.seller.postseller(data.value).subscribe((res)=>{
+//     console.log(res);
+//   swal("login successful !","success");
+//   })
+// }
 
  
   loginenter(){
