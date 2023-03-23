@@ -1,3 +1,3 @@
-const baseUrl = `https://ecom-backend-jsonserver.onrender.com`;
+const baseUrl = `http://localhost:3000`;
 
 export default baseUrl;
