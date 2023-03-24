@@ -5,6 +5,7 @@
     background-image: linear-gradient(rgba(177, 86, 237, 0.826),rgba(84, 183, 222, 0.868),rgba(92, 216, 162, 0.927),rgba(108, 241, 219, 0.813),rgba(177, 86, 237, 0.826));
 }
 .container{
-    width: 400px;
+    width: 300px;
     background-color: rgba(206, 203, 203, 0.89);
 }
+

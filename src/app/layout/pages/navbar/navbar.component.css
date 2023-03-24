@@ -1,12 +1,15 @@
-.example-spacer {
+/* .example-spacer {
     flex: 1 1 auto;
   }
+ .width{
+    width: 400px;
+  } */
 
   mat-toolbar{
-    box-shadow: 9px 6px 12px grey;
-  }
-  .width{
-    width: 400px;
+    box-shadow: 2px 4px 15px grey;
+  } 
+  .example-spacer {
+    flex: 1 1 auto;
   }
 
   .size{

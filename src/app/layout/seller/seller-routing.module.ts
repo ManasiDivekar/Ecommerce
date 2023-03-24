@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SellerproductComponent } from './sellerproduct/sellerproduct.component';
 import { SignAuthComponent } from './sign-auth/sign-auth.component';
 
 const routes: Routes = [
@@ -7,6 +8,9 @@ const routes: Routes = [
  children:[
   {
     path:'',component:SignAuthComponent
+  },
+  {
+    path:'sellerproduct',component:SellerproductComponent
   }
  ]
 }

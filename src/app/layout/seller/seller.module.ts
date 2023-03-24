@@ -6,19 +6,23 @@ import { SellerComponent } from './seller.component';
 import { SignAuthComponent } from './sign-auth/sign-auth.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from 'src/app/material/material.module';
+import { SellerproductComponent } from './sellerproduct/sellerproduct.component';
 
 
 @NgModule({
   declarations: [
     SellerComponent,
-    SignAuthComponent
+    SignAuthComponent,
+    SellerproductComponent
   ],
   imports: [
     CommonModule,
     SellerRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
 
   ]
 })
