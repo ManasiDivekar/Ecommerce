@@ -6,34 +6,54 @@
       "email": "mansi@gmail.com"
     },
     {
-      "id": 1,
-      "name": "abc",
-      "password": "abc",
-      "email": "mansi@gmail.com"
-    },
-    {
-      "name": "abc",
-      "password": "abc",
-      "email": "123mansi@gmail.com",
-      "id": 2
-    },
-    {
       "name": "rashmi",
       "password": "rashmi",
       "email": "rashmi@gmail.com",
       "id": 3
+    },
+    {
+      "name": "harsh",
+      "password": "harsh@123",
+      "email": "harsh@gmail.com",
+      "id": 4
     }
   ],
-
-  "products":[
+  "products": [
     {
-    "name": "Samsung m 40 a ",
-    "price": "550",
-    "category": "mobile",
-    "color": "white",
-    "description": "this is a Samsung product",
-    "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
-    "id": 1
+      "name": "Samsung m 40 a ",
+      "price": "550",
+      "category": "mobile",
+      "color": "white",
+      "description": "this is a Samsung product",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
+      "id": 1
+    },
+    {
+      "name": "Fastrack bag ",
+      "price": "1200",
+      "category": "bag",
+      "color": "black",
+      "description": "this is a fastrack product",
+      "image": "https://media.croma.com/image/upload/v1629921641/Croma%20Assets/Miscellanous/5K%20SKU_Images/Images/238536_djcnsr.png",
+      "id": 3
+    },
+    {
+      "name": "citizen watch c2 women",
+      "price": "1000",
+      "category": "watch",
+      "color": "gold",
+      "description": "this is a citizen product",
+      "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81Cooo5uqaL._UY445_.jpg",
+      "id": 4
+    },
+    {
+      "name": "ikea chair b2",
+      "price": "1500",
+      "category": "furniture",
+      "color": "black",
+      "description": "this is a ikea product",
+      "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/31QMX2OhElL.jpg",
+      "id": 5
     }
-    ]
+  ]
 }
