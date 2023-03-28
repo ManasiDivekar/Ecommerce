@@ -1,7 +1,18 @@
 .mid-sec{
+    height: 400px;
     background-image: url("/assets/media/midsec.jpg");
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: 100%;
 }
-
+.mid-sec :hover{
+    background-image:url("src/assets/media/shopingqoute.jpg");
+    background-position: 100%;
+    background-size: 100%;
+    border-radius: 150px 0;
+    border: 2px solid rgba(216, 25, 57, 0.936);
+}
+.bg_effect{
+    background-image: linear-gradient(to bottom right,rgb(154, 120, 246),rgba(245, 127, 190, 0.977));
+    text-shadow: 4px 5px 5px rgb(37, 36, 36);
+}

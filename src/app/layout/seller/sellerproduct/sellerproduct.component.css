@@ -1,0 +1,8 @@
+th ,td{ 
+    border-right: 1px solid black;
+}
+
+th{
+    height: 50px;
+    border: 2px solid rgba(49, 164, 217, 0.692);
+}

@@ -1,38 +1,51 @@
 <br>
 <div class="container-fluid">
     <div class="row bg-dark h-25">
-        <marquee direction="left" class="text-center  text-light">Flat 10% off to the New Customer, Don't miss the
+        <marquee direction="left" width="70%" behavior="scroll" scrollamount="15" class="text-center  text-light">Flat 10% off to the New Customer, Don't miss the
             opportunity. <mat-icon>sentiment_very_satisfied</mat-icon></marquee>
     </div>
-    <br>
+    <!-- <br>
     <div class="row">
-        <div class=" carousel slide" id="carousel">
-            <div class="carousel-indicators">
-                <button type="button" class="active " data-bs-target="#carousel" data-bs-slide-to="0"></button>
-            </div>
-            <div class="carousel-inner" data-interval="1000">
-                <div class="carousel-item active" *ngFor="let product of allproduct">
-                    <img class="d-block image-fluid w-100" height="300px" src="{{product.image}}" alt="">
+        <div class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class=" carousel-item active" data-bs-interval="1000">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3 col-lg-4 justify-content-center h-100"> 
+                            <img src="./assets/media/carousel1.jpg" height="300px" alt="">  
+                       </div>
+                       <div class="col-sm-12 col-md-6 col-lg-4 justify-content-center">
+                           <img src="./assets/media/carouse3.jpg"  height="300px" alt="">
+                       </div>
+                       <div class=" col-sm-12 col-md-3 col-lg-4 justify-content-center">
+                        <img src="./assets/media/carousel2.png"  height="300px" alt="">
+                       </div>
+                    </div>
+                </div>
+                <div class=" carousel-item " *ngFor="let image of demandProduct">
+                    <div class="row">
+                        <div class="bg_effect col-sm-12 col-md-3 col-lg-4 d-flex align-items-center justify-content-center">
+                            <span class="display-6"> <b>{{image.name |uppercase}}</b> </span>   
+                       </div>
+                       <div class="bg_effect col-sm-12 col-md-6 col-lg-4 d-flex align-items-center justify-content-center">
+                           <img  src="{{image.image}}" height="300px" width="300px" alt="">
+                       </div>
+                       <div class="bg_effect col-sm-12 col-md-3  col-lg-4  d-flex align-items-center justify-content-center">
+                         <span class="display-6"> <b>{{image.description |uppercase}}</b> </span>
+                       </div>
+                    </div>
                 </div>
             </div>
-            <button type="button" class=" carousel-control-prev" data-bs-target="#carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon text-dark"></span></button>
-            <button type="button" class=" carousel-control-next " data-bs-target="#carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon text-dark"></span></button>
         </div>
     </div>
     <br>
+    <div class="row justify-content-center mid-sec">
+        <div class=" col-sm-12 col-md-6 d-flex align-items-center justify-content-center">
 
-    <!-- <div class="row h-100 mid-sec">
-    <div class="row h-50 sec1 text-center">
-        <marquee behavior="" direction="left">MUMBAI BASED PRODUCT </marquee>
-    </div>
-    <div class="row h-50 sec2">
-    </div>
+        </div>
    </div> -->
     <br>
     <div class="row">
-        <div class=" col-sm-12 col-md-4 col-lg-3 my-3" *ngFor="let product of allproduct">
+        <div class=" col-sm-12 col-md-4 col-lg-3 my-3" *ngFor="let product of allProduct">
             <mat-card>
                 <mat-card-header>
                     <mat-card-title>

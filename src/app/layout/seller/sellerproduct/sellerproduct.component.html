@@ -1,1 +1,43 @@
-<p>sellerproduct works!</p>
+<br><br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+        <button type="button" routerLink="/seller/addproduct" class="my-3" mat-flat-button color="primary">ADD PRODUCT</button>
+        </div>
+        <div class="card">
+      <div class="row">
+        <div class="col-sm-12  table-responsive">
+            <table class="table table-bordered  table-light table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th class="p-auto">ID</th>
+                        <th class="p-auto">NAME</th>
+                        <th class="p-auto">IMAGE</th>
+                        <th class="p-auto">DESCRIPTION</th>
+                        <th class="p-auto">PRICE</th>
+                        <th class="p-auto">CATEGORY</th>
+                        <th class="p-auto">COLOR</th>
+                        <th class="p-auto">ACTIONS</th>
+                     </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of allProduct">
+                        <td class="p-auto"><b> {{product.id}}</b> </td>
+                        <td class="p-auto"><b> {{product.name|uppercase}}</b> </td>
+                        <td class="p-auto"> <img src="{{product.image}}" height="100px" width="100px" alt=""> </td>
+                        <td class="p-auto"><b> {{product.description |uppercase}}</b> </td>
+                        <td class="p-auto"><b> {{product.price | currency:'INR'}}</b> </td>
+                        <td class="p-auto"><b> {{product.category|uppercase}}</b> </td>
+                        <td class="p-auto"><b> {{product.color|uppercase}}</b> </td>
+                        <td>
+                         <button type="button" mat-mini-fab  color="primary" [routerLink]="['/seller/updateproduct/',product.id]"><mat-icon>update</mat-icon></button>
+                         <button type="button" mat-mini-fab class="mx-2" color="warn" (click)="deleteproduct(product.id)" ><mat-icon>delete</mat-icon></button>
+                        </td>
+                     </tr>
+                </tbody>
+               </table>
+        </div>
+      </div>
+        </div>
+    </div>
+</div>

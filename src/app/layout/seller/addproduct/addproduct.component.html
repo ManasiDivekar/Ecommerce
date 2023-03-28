@@ -1,0 +1,48 @@
+<br><br>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-9 col-lg-9 productform">
+          <div class="row justify-content-center">
+            <div class=" col-sm-12 col-md-7 col-lg-9 my-2">
+                <mat-card>
+                    <mat-card-header class="justify-content-center">
+                        <h1>ADD PRODUCT DETAILS</h1>
+                    </mat-card-header><hr>
+                    <mat-card-content>
+                        <form action="" [formGroup]="addProduct">
+                            <mat-form-field class="w-100" appearance="fill">
+                                <mat-label>PRODUCT NAME:</mat-label>
+                                <input type="text" matInput formControlName="name" placeholder="enter product name">
+                            </mat-form-field>
+                            <mat-form-field class="w-100" appearance="fill">
+                                <mat-label>PRODUCT DESCRIPTION:</mat-label>
+                                <input type="text" matInput formControlName="description" placeholder="enter product description ">
+                            </mat-form-field>
+                            <mat-form-field class="w-100" appearance="fill">
+                                <mat-label>PRODUCT CATEGORY:</mat-label>
+                                <input type="text" matInput formControlName="category" placeholder="enter product category">
+                            </mat-form-field>
+                            <mat-form-field class="w-100" appearance="fill">
+                                <mat-label>PRODUCT COLOR:</mat-label>
+                                <input type="text" matInput formControlName="color" placeholder="enter product color">
+                            </mat-form-field>
+                            <mat-form-field class="w-100" appearance="fill">
+                                <mat-label>PRODUCT PRICE:</mat-label>
+                                <input type="text" matInput formControlName="price" placeholder="enter product amount">
+                            </mat-form-field>
+                            <mat-form-field class="w-100" appearance="fill">
+                                <mat-label>PRODUCT IMAGE URL:</mat-label>
+                                <input type="text" matInput formControlName="image" placeholder="enter image url strictly.">
+                            </mat-form-field>
+                           <mat-card-actions>
+                            <button type="reset" class="mx-3" mat-flat-button color="warn">RESET</button>
+                            <button type="button"  mat-flat-button color="primary" (click)="addproduct(addProduct)" >ADD PRODUCT</button>
+                           </mat-card-actions>
+                        </form>
+                    </mat-card-content>
+               </mat-card>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

@@ -1,27 +1,49 @@
 {
   "seller": [
     {
-      "name": "mansi",
-      "password": "mansi",
-      "email": "mansi@gmail.com"
-    },
-    {
       "name": "rashmi",
       "password": "rashmi",
       "email": "rashmi@gmail.com",
       "id": 3
     },
     {
-      "name": "harsh",
-      "password": "harsh@123",
-      "email": "harsh@gmail.com",
+      "name": "manish",
+      "password": "manish",
+      "email": "manish",
       "id": 4
+    },
+    {
+      "name": "akshata",
+      "password": "akshta",
+      "email": "akshta",
+      "id": 5
+    },
+    {
+      "name": "payal",
+      "password": "payal",
+      "email": "payal",
+      "id": 6
+    }
+  ],
+  "user": [
+    {
+      "name": "user",
+      "password": "password",
+      "email": "email@gmail.com",
+      "id": 1
+    }
+  ],
+  "login": [
+    {
+      "name": "mansi",
+      "password": "mansi",
+      "id": 1
     }
   ],
   "products": [
     {
       "name": "Samsung m 40 a ",
-      "price": "550",
+      "price": 115000,
       "category": "mobile",
       "color": "white",
       "description": "this is a Samsung product",
@@ -54,6 +76,42 @@
       "description": "this is a ikea product",
       "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/31QMX2OhElL.jpg",
       "id": 5
+    },
+    {
+      "id": 7,
+      "name": "Samsung m 40 a ",
+      "description": "this is a Samsung mobile product",
+      "category": "mobile",
+      "color": "white",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
+      "price": 115000
+    },
+    {
+      "name": "goldplated neclase with studs",
+      "description": "this is jewellery product",
+      "category": "jewellery",
+      "color": "gold",
+      "image": "https://cdn.shopify.com/s/files/1/1501/0634/products/High-Premium-Gold-plated-designer-Necklace-with-cz-stone-12019N-Necklace-Set-Griiham.jpg?v=1676356115",
+      "price": "1500",
+      "id": 8
+    },
+    {
+      "name": " boat headphone 1200",
+      "description": "this is boat product",
+      "category": "this is electronic product",
+      "color": "black",
+      "image": "https://i.gadgets360cdn.com/products/large/102Black-720x-800x747-1612019447.jpg",
+      "price": "1000",
+      "id": 9
+    },
+    {
+      "name": "cotton anarkali dress",
+      "description": "this is a fashion product",
+      "category": "dress",
+      "color": "multi",
+      "image": "http://cdn.shopify.com/s/files/1/0730/6487/4301/products/1663236590.VQ174-9206__3.jpg",
+      "price": "2000",
+      "id": 10
     }
   ]
 }

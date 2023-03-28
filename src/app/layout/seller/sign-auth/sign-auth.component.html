@@ -2,11 +2,12 @@
 
 <div class="container-fluid " *ngIf="!sellersignin">
     <div class="row">
-        <div class="col-sm-12 col-md-8 col-lg-6 mx-auto register ">
-            <div class="container my-5 ">
+        <div class="col-sm-12 col-md-8 col-lg-8 mx-auto register ">
+            <div class="row  my-5 justify-content-center">
+                <div class="cont col-sm-12 col-md-7 col-lg-9">
                 <mat-card>
                     <mat-card-header>
-                        <h2 class="text-center my-3">SIGN UP FORM (REGISTRATION)</h2>
+                        <h2 class="text-center my-3">SIGN UP FORM (SELLER REGISTRATION)</h2>
                     </mat-card-header>
                     <hr>
                     <mat-card-content>
@@ -34,7 +35,7 @@
                             </div>
                             <div class="col-md-6">
                                 <button class="mx-3 btn btn-primary" type="button"
-                                (click)="addseller(register)">Signup</button>
+                                (click)="addseller()">Signup</button>
                             </div>
                         </div>
                     </mat-card-actions>
@@ -47,6 +48,7 @@
                     </mat-card-footer>
                 </mat-card>
             </div>
+            </div>
         </div>
     </div>
 </div>
@@ -56,11 +58,12 @@
 
 <div class="container-fluid " *ngIf="sellersignin">
     <div class="row">
-        <div class="col-sm-12 col-md-8 col-lg-6 mx-auto login">
-            <div class="container my-5 ">
+        <div class="col-sm-12 col-md-8 col-lg-8 mx-auto login">
+            <div class="row my-5 justify-content-center">
+                <div class=" cont col-sm-12 col-md-7 col-lg-9">
                 <mat-card>
                     <mat-card-header>
-                        <h2 class="text-center my-3">SIGN IN FORM (LOGIN)</h2>
+                        <h2 class="text-center my-3">SIGN IN FORM (SELLER LOGIN)</h2>
                     </mat-card-header>
                     <hr>
                     <mat-card-content>
@@ -83,7 +86,7 @@
                                         <button class=" mx-md-5  btn btn-secondary" type="reset" >Reset</button>
                                     </div>
                                     <div class="col-sm-12 col-md-6 ">
-                                        <button class=" mx-md-3  btn btn-primary" type="button" (click)="loginseller()">Signin</button>
+                                        <button class=" mx-md-3  btn btn-primary" type="button" (click)="loginseller(login)">Signin</button>
                                     </div>
                                 </div>
                             </mat-card-actions>
@@ -95,6 +98,7 @@
                                     class="text-primary">click here</a> for signup</span></h4>
                     </mat-card-footer>
                 </mat-card>
+            </div>
             </div>
         </div>
     </div>

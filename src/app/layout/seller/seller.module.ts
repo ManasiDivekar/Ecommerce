@@ -8,13 +8,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from 'src/app/material/material.module';
 import { SellerproductComponent } from './sellerproduct/sellerproduct.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
+import { UpdateproductComponent } from './updateproduct/updateproduct.component';
 
 
 @NgModule({
   declarations: [
     SellerComponent,
     SignAuthComponent,
-    SellerproductComponent
+    SellerproductComponent,
+    AddproductComponent,
+    UpdateproductComponent
   ],
   imports: [
     CommonModule,

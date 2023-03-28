@@ -9,7 +9,8 @@ const routes: Routes = [
   {
     path:'home',component:HomeComponent
   },
-  { path: 'seller', loadChildren: () => import('./layout/seller/seller.module').then(m => m.SellerModule) }
+  { path: 'seller', loadChildren: () => import('./layout/seller/seller.module').then(m => m.SellerModule) },
+  { path: 'user', loadChildren: () => import('./layout/user/user.module').then(m => m.UserModule) }
 ];
 
 @NgModule({

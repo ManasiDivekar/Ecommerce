@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SellerserviceService } from 'src/app/sharedservices/sellerservice.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+sellerName:any;
+sellerLogged:any
+  constructor(private seller:SellerserviceService, private router:Router) { }
+menuType =false;
+
+
 
   ngOnInit(): void {
+    this.sellerLogged = this.seller.getloginseller();
+    console.log("dataafter getting from local storage",this.sellerLogged);    
+    this.router.events.subscribe((res:any)=>{
+      console.log(res);
+      if(res.url){
+        if(this.sellerLogged && res.url.includes('/seller/')){
+          if(this.sellerLogged){ 
+            // let sellerData= JSON.parse(this.sellerLogged);
+             this.sellerName=JSON.parse(this.sellerLogged).name
+             console.log("seller name.navbar:",this.sellerName);
+             this.menuType=true;
+          }
+          }
+          else{
+            this.menuType=false;
+            // this.logout();
+          }
+      }
+    })
+
   }
 
+  logout(){
+    localStorage.clear();
+  this.router.navigate(['home']);
+  }
 }

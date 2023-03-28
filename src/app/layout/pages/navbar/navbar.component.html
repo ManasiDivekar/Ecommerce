@@ -2,17 +2,22 @@
   <mat-toolbar-row>
       <a href="" class="h-100 w-50"><img class="image-fluid h-100 w-25" src="./assets/media/logo.png" alt=""></a>
     <span class="example-spacer"></span>
-      <mat-form-field class="  size w-50" appearance="fill">
+      <mat-form-field *ngIf="!menuType" class="  size w-50" appearance="fill">
         <mat-label>search</mat-label>
            <input matInput class="" >
            <mat-icon matSuffix><a href="" class="text-decoration-none"> search </a></mat-icon>
   </mat-form-field>
   </mat-toolbar-row>
   <mat-toolbar-row class="justify-content-center">
-    <a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="home">HOME</a>
-          <a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="seller">SELLER</a>
-          <a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="home" >LOGIN/SIGNUP</a>
-          <a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button matBadge="0" matBadgeColor="warn" color="basic" routerLink="home">CART</a>
+          <a *ngIf="!menuType" class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="home">HOME</a>
+          <a *ngIf="!menuType" class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="seller">SELLER</a>
+          <a *ngIf="!menuType" class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="user" >LOGIN/SIGNUP</a>
+          <a *ngIf="!menuType" class="mx-md-2 mx-sm-1 m-auto" mat-flat-button matBadge="0" matBadgeColor="warn" color="basic" routerLink="home">CART</a>
+
+
+          <a *ngIf="menuType" class="mx-md-2 mx-sm-1 m-auto"  routerLink="seller/sellerproduct"> {{sellerName }} </a>
+          <a *ngIf="menuType" class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="seller/Addproduct">Addproduct</a>
+          <a *ngIf="menuType" class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" (click)="logout()">logout</a>
   </mat-toolbar-row>
 </mat-toolbar>
 

@@ -1,0 +1,9 @@
+.register{
+    background-image: linear-gradient(to right,rgba(141, 59, 216, 0.813), rgba(148, 241, 201, 0.881), rgba(197, 55, 150, 0.79), rgba(76, 171, 154, 0.826));
+}
+.login{
+    background-image: linear-gradient(rgba(75, 133, 181, 0.826),rgba(153, 80, 214, 0.868),rgba(87, 184, 108, 0.852),rgba(90, 190, 173, 0.813));
+}
+.cont{
+    background-color: rgba(127, 117, 117, 0.79);
+}
