@@ -1,6 +1,6 @@
 .mid-sec{
     height: 400px;
-    background-image: url("/assets/media/midsec.jpg");
+    background-image: url("src/assets/media/midsec.jpg");
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: 100%;

@@ -23,6 +23,12 @@
       "password": "mehek",
       "email": "mehek@gmail.com",
       "id": 6
+    },
+    {
+      "name": "mansi",
+      "password": "mansi",
+      "email": "mansi@gmail.com",
+      "id": 7
     }
   ],
   "sellerlogin": [
@@ -35,6 +41,11 @@
       "email": "mehek@gmail.com",
       "password": "mehek",
       "id": 2
+    },
+    {
+      "email": "mansi@gmail.com",
+      "password": "mansi",
+      "id": 3
     }
   ],
   "user": [
