@@ -16,12 +16,12 @@ menuType =false;
 
 
 
-  ngOnInit(): void {
-    this.sellerLogged = this.seller.getloginseller();
-    console.log("dataafter getting from local storage",this.sellerLogged);    
+  ngOnInit(): void {   
     this.router.events.subscribe((res:any)=>{
       console.log(res);
       if(res.url){
+        this.sellerLogged = this.seller.getsellerregisterlocal();
+        console.log("dataafter getting from local storage",this.sellerLogged); 
         if(this.sellerLogged && res.url.includes('/seller/')){
           if(this.sellerLogged){ 
             // let sellerData= JSON.parse(this.sellerLogged);

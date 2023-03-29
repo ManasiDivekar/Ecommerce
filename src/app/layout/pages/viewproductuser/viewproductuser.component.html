@@ -1,0 +1,26 @@
+<br>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-6 col-lg-8">
+          <mat-card>
+            <mat-card-header>
+                <h1 class="text-center"><b>PRODUCT DETAILS....</b></h1>
+            </mat-card-header><hr>
+            <img src="{{productdet.image}}" class="image-fluid d-block mx-auto" height="300px" width="300px" alt=""><hr>
+            <mat-card-content>
+                <h1 class="text-center"> {{productdet.description |uppercase}} </h1>
+                    <div class="row">
+                        <div class="col-6">
+                            <h1 class="text-center"> CATEGORY: {{productdet.category |uppercase}} </h1>
+                        </div>
+                        <div class="col-6">
+                            <h1 class="text-center"> COLOR: {{productdet.color |uppercase}} </h1>
+                        </div>
+                    </div>
+                    <h1 class="text-center"><b>PRICE : {{productdet.price |currency:'INR'}}</b></h1>
+            </mat-card-content><hr>
+                <button type="button" class="d-block mx-auto" mat-stroked-button color="primary">ADD TO CART</button>
+          </mat-card>
+        </div>
+    </div>
+</div>

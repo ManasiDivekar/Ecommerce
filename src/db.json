@@ -13,16 +13,28 @@
       "id": 4
     },
     {
-      "name": "akshata",
-      "password": "akshta",
-      "email": "akshta",
+      "name": "sakshi",
+      "password": "sakshi",
+      "email": "sakshi@gmail.com",
       "id": 5
     },
     {
-      "name": "payal",
-      "password": "payal",
-      "email": "payal",
+      "name": "mehek",
+      "password": "mehek",
+      "email": "mehek@gmail.com",
       "id": 6
+    }
+  ],
+  "sellerlogin": [
+    {
+      "email": "email@gmail.com",
+      "password": "email",
+      "id": 1
+    },
+    {
+      "email": "mehek@gmail.com",
+      "password": "mehek",
+      "id": 2
     }
   ],
   "user": [
@@ -31,13 +43,24 @@
       "password": "password",
       "email": "email@gmail.com",
       "id": 1
+    },
+    {
+      "name": "sakshi",
+      "password": "sakshi",
+      "email": "sakshi@gmail.com",
+      "id": 2
     }
   ],
-  "login": [
+  "userlogin": [
     {
-      "name": "mansi",
+      "email": "mansi",
       "password": "mansi",
       "id": 1
+    },
+    {
+      "email": "sakshi@gmail.com",
+      "password": "sakshi",
+      "id": 2
     }
   ],
   "products": [

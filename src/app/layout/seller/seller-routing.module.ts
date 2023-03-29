@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SellerauthGuard } from 'src/app/sharedservices/authguard/sellerauth.guard';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { SellerproductComponent } from './sellerproduct/sellerproduct.component';
 import { SignAuthComponent } from './sign-auth/sign-auth.component';
@@ -12,7 +13,7 @@ const routes: Routes = [
     path:'',component:SignAuthComponent
   },
   {
-    path:'sellerproduct',component:SellerproductComponent
+    path:'sellerproduct',component:SellerproductComponent, canActivateChild:[SellerauthGuard]
   },
   {
     path:'addproduct',component:AddproductComponent

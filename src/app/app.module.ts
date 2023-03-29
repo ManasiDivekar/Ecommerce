@@ -10,13 +10,15 @@ import { MaterialModule } from './material/material.module';
 import { NavbarComponent } from './layout/pages/navbar/navbar.component';
 import { HomeComponent } from './layout/pages/home/home.component';
 import { FooterComponent } from './layout/pages/footer/footer.component';
+import { ViewproductuserComponent } from './layout/pages/viewproductuser/viewproductuser.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    ViewproductuserComponent
   ],
   imports: [
     BrowserModule,

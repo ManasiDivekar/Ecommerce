@@ -9,7 +9,9 @@
   .example-spacer {
     flex: 1 1 auto;
   }
-
+li{
+  display: inline;
+}
   .size{
     font-size: 12px;
   }

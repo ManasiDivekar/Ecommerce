@@ -4,8 +4,8 @@ export interface signup{
     "email":string;
 }
 
-export default interface login{
-    "name":string;
+export default interface signin{
+    "email":string;
     "password":string;
 }
 
