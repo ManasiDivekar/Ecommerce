@@ -60,6 +60,12 @@
       "password": "sakshi",
       "email": "sakshi@gmail.com",
       "id": 2
+    },
+    {
+      "name": "mansi",
+      "password": "mansi",
+      "email": "mansi@gmail.com",
+      "id": 3
     }
   ],
   "userlogin": [
@@ -72,6 +78,11 @@
       "email": "sakshi@gmail.com",
       "password": "sakshi",
       "id": 2
+    },
+    {
+      "email": "mansi@gmail.com",
+      "password": "mansi",
+      "id": 3
     }
   ],
   "products": [

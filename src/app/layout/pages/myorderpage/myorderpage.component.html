@@ -1,0 +1,29 @@
+<br><br>
+<div class="container-fluid table-responsive">
+    <h1 class="text-center my-3"><span class="display-6">My orders</span></h1>
+
+    <table class="table table-bordered  table-light table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Orders</th>
+                <th>Order Id</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orderData">
+                <td>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn1h-kM3vQOw4BIdUTZ9e0AdO3so5r3_87RYZKdG3b9A&usqp=CAU&ec=48665701" height="50px" width="50px" alt="">
+                </td>
+                <td>{{order.id}}</td>
+                <td>{{order.totalPrice}}</td>
+                <td>In progress</td>
+                <td>
+                    <button type="button" class="btn btn-outline-danger" (click)="cancelOrder(order.id)">Cancel Order</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

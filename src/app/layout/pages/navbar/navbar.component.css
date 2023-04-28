@@ -1,17 +1,16 @@
-/* 
- .width{
-    width: 400px;
-  } */
+
 
   mat-toolbar{
     box-shadow: 2px 4px 15px grey;
   } 
-  .example-spacer {
-    flex: 1 1 auto;
-  }
+
 li{
   display: inline;
 }
   .size{
     font-size: 12px;
+  }
+
+  .bgcolor{
+    background-color: rgba(245, 241, 241, 0.913);
   }

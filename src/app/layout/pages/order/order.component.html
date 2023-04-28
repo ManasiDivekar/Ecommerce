@@ -1,0 +1,46 @@
+<br><br>
+<h1 class="text-center"><span class="display-6 ">Confirm Order</span></h1>
+<div class="container-fluid">
+    <div class="row">
+     <div class=" col-sm-12 col-md-6">
+        <mat-card>
+            <mat-card-header>
+                <h2 class="text-center my-3">Address details to place your order</h2>
+            </mat-card-header>
+            <hr>
+            <mat-card-content>
+                <form action="" #address="ngForm" (ngSubmit)="saveAddress(address.value)">
+                    <mat-form-field class="w-100" appearance="fill">
+                        <mat-label>EMAIL:</mat-label>
+                        <input type="email" matInput ngModel name="email" placeholder="enter your email">
+                    </mat-form-field>
+                    <mat-form-field class="w-100" appearance="fill">
+                        <mat-label>Address:</mat-label>
+                        <input type="text" matInput ngModel name="address" placeholder="enter your address">
+                    </mat-form-field>
+                    <mat-form-field class="w-100" appearance="fill">
+                        <mat-label>Contact:</mat-label>
+                        <input type="contact" matInput ngModel name="contact" placeholder="enter your contact">
+                    </mat-form-field>
+            <mat-card-actions>
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <button class="mx-5 btn btn-secondary" type="reset" >Reset</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="mx-3 btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </div>
+            </mat-card-actions>
+            </form>
+        </mat-card-content>
+        </mat-card>
+     </div>
+     <div class=" col-sm-12 col-md-6 d-flex align-items-center justify-content-center">
+       <div>
+         <h1>Total Amount: {{priceTotal}} </h1>
+         <h1>Payment Mode: <b>Cash on Delivery</b></h1>
+       </div>
+     </div>
+    </div>
+</div>

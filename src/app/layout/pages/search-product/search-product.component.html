@@ -1,0 +1,36 @@
+<br>
+<br>
+<div class="container-fluid" *ngIf="allRelatedProduct">
+    <div class="row" *ngFor="let product of allRelatedProduct">
+        <mat-card>
+                <mat-card-content>
+                    <div class="row">
+                    <div class="col-md-3 justify-content-center">
+                        <a [routerLink]="['/viewproduct/',product.id]"><img src="{{product.image}}" height="220px" width="200px" alt=""></a>
+                       </div>
+                       <div class="col-md-6">
+                        <h1>{{product.name | uppercase}}</h1>
+                        <h2>{{product.description | uppercase}}</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Category:{{product.category |uppercase}} </h3>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Color:{{product.color |uppercase}} </h3>
+                            </div>
+                        </div>
+                        <h1><b>PRICE:</b>{{product.price | currency:'INR'}}</h1>
+                       </div>
+                      
+                       </div>
+                </mat-card-content>
+        </mat-card>
+        <hr>
+    </div>
+</div>
+
+<div class="container" *ngIf="allRelatedProduct==0">
+
+    <h1>NO DATA FOUND</h1>
+
+</div>

@@ -1,27 +1,48 @@
-<mat-toolbar color="basic">
-  <mat-toolbar-row>
-      <a href="" class="h-100 w-50"><img class="image-fluid h-100 w-25" src="./assets/media/logo.png" alt=""></a>
-    <span class="example-spacer"></span>
-      <mat-form-field *ngIf="!menuType" class="  size w-50" appearance="fill">
+<div class="container-fluid bgcolor">
+  <div class="row">
+    <div class="col-sm-12 col-md-6 my-1 ">
+      <a href="" class=""><img class="" height="100px" width="" src="./assets/media/logo.png" alt=""></a>
+    </div>
+     <div class="col-sm-12 col-md-6 ">
+      <mat-form-field *ngIf="menuType =='default' || 'user'" class="size w-100" appearance="fill">
         <mat-label>search</mat-label>
-           <input matInput class="" >
-           <mat-icon matSuffix><a href="" class="text-decoration-none"> search </a></mat-icon>
+          <input matInput type="search" placeholder="product name" (keyup)="searchsuggestion($event)" (blur)="hideproduct()"  #pName>
+           <mat-icon matSuffix><a (click)="searchProduct(pName.value)" class="text-decoration-none"> search </a></mat-icon>
   </mat-form-field>
-  </mat-toolbar-row>
+  <ul class="searchResult" *ngIf="searchRelatedData">
+    <li *ngFor="let name of searchRelatedData">
+      <mat-card><a (mousedown)="directtoPage(name.id)" >{{name.name}}</a></mat-card>
+    </li>
+    </ul>
+     </div>
+  </div>
+</div>
+<mat-toolbar color="basic">
   <mat-toolbar-row class="justify-content-center">
-          <ul *ngIf="!menuType">
-            <li><a  class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="home">HOME</a></li>
-          <li><a  class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="seller">SELLER</a></li>
-          <li><a  class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="user" >LOGIN/SIGNUP</a></li>
-          <li><a  class="mx-md-2 mx-sm-1 m-auto" mat-flat-button matBadge="0" matBadgeColor="warn" color="basic" routerLink="home">CART</a></li>
-
+          <ul *ngIf="menuType=='default'">
+            <li><a  class="mx-md-2" mat-flat-button color="basic" routerLink="home">HOME</a></li>
+          <li><a  class="mx-md-2 " mat-flat-button color="basic" routerLink="seller">SELLER</a></li>
+          <li><a  class="mx-md-2 " mat-flat-button color="basic" routerLink="user" >SIGNUP</a></li>
+          <!-- <li><a  class="mx-md-2  " mat-flat-button matBadge="{{cartItemNumberShow}}" matBadgeColor="warn" color="basic" routerLink="home">CART</a></li> -->
+          <li><a  class="mx-md-2  " mat-flat-button color="basic" routerLink="cart">CART <span>( <span>{{cartItemNumberShow}}</span> )</span></a></li>
           </ul>
 
-          <ul *ngIf="menuType">
+          <ul *ngIf="menuType=='user'">
+            <li><a  class="mx-md-2" mat-flat-button color="basic" routerLink="home">HOME</a></li>
+            <!-- <li><a  class="mx-md-2  " mat-flat-button matBadge="{{cartItemNumberShow}}" matBadgeColor="warn" color="basic" routerLink="home">CART</a></li> -->
+            <li><a  class="mx-md-2  " mat-flat-button color="basic" [routerLink]="cartItemNumberShow>0?'cart':null">CART <span>( <span>{{cartItemNumberShow}}</span> )</span></a></li>
+           <li><a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="/myorder/">My Orders</a></li>
+           <li> <a class="mx-md-2 mx-sm-1 m-auto"  routerLink=""> <mat-icon>account_circle</mat-icon> {{userName}}  </a></li>
+           <li><a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" (click)="logout()">logout</a></li>
+           </ul>
+
+          <ul *ngIf="menuType=='seller'">
            <li> <a class="mx-md-2 mx-sm-1 m-auto"  routerLink="/seller/sellerproduct"> <mat-icon>account_circle</mat-icon> {{sellerName }} </a></li>
           <li><a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="/seller/addproduct">Addproduct</a></li>
           <li><a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" (click)="logout()">logout</a></li>
           </ul>
+
+          
   </mat-toolbar-row>
 </mat-toolbar>
 

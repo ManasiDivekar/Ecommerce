@@ -1,0 +1,9 @@
+.productshape{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+input{
+    width: 30px;
+}

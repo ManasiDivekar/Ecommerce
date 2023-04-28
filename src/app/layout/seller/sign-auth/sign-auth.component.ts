@@ -30,13 +30,7 @@ sellerRegisterPassword:any;
  addseller(data:FormGroup){
 this.seller.postseller(data.value).subscribe((res)=>{
   console.log("register response",res);
-  this.seller.setsellerregisterlocal(res);
-  this.sellerRegisterData= this.seller.getsellerregisterlocal();
-  if(this.sellerRegisterData){
-    this.sellerRegisterEmail= JSON.parse(this.sellerRegisterData).email;
-    console.log("seller email:",this.sellerRegisterEmail);
-    this.sellerRegisterPassword=JSON.parse(this.sellerRegisterData).password
-  }
+  // this.seller.setsellerregisterlocal(res);
  swal("saved","registered successfully","success");
   this.loginenter();
 })
@@ -46,17 +40,42 @@ ngOnInit(): void {
 }
 
  loginseller(data:FormGroup){
-    if(this.sellerRegisterEmail===this.login.value.email && this.sellerRegisterPassword===this.login.value.password){ 
-    this.seller.loginapi(data.value).subscribe((res)=>{
-      console.log("seller login response",res);
-      this.seller.setsellerlogin(res);
-      swal("","login successful !","success");
-    this.router.navigate(['seller/sellerproduct']);
+  this.seller.getsellerregister(data.value).subscribe((res:any)=>{
+      console.log(res);
+      this.seller.setsellerregisterlocal(res)
+      if( res && res.length===1){
+        swal("","login successful !","success");
+        this.seller.isSellerLoggedIn.next(true);
+      this.router.navigate(['seller/sellerproduct'])
+      }else{
+        swal("","enter valid data","error")
+      }
     })
-  }else{
-    swal("","enter valid data","error")
   }
-  }
+
+  // register
+
+  
+ // this.sellerRegisterData= this.seller.getsellerregisterlocal();
+  // if(this.sellerRegisterData){
+  //   this.sellerRegisterEmail= JSON.parse(this.sellerRegisterData).email;
+  //   console.log("seller email:",this.sellerRegisterEmail);
+  //   this.sellerRegisterPassword=JSON.parse(this.sellerRegisterData).password
+  // }
+
+// login
+
+  //   if(this.sellerRegisterEmail===this.login.value.email && this.sellerRegisterPassword===this.login.value.password){ 
+  //   this.seller.loginapi(data.value).subscribe((res)=>{
+  //     console.log("seller login response",res);
+  //     this.seller.setsellerlogin(res);
+  //     swal("","login successful !","success");
+  //   this.router.navigate(['seller/sellerproduct']);
+  //   })
+  // }else{
+  //   swal("","enter valid data","error")
+  // }
+  
  
 
   loginenter(){

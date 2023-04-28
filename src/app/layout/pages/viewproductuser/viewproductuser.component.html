@@ -1,5 +1,5 @@
 <br>
-<div class="container-fluid">
+<div class="my-3 container-fluid">
     <div class="row justify-content-center">
         <div class="col-sm-12 col-md-6 col-lg-8">
           <mat-card>
@@ -15,11 +15,23 @@
                         </div>
                         <div class="col-6">
                             <h1 class="text-center"> COLOR: {{productdet.color |uppercase}} </h1>
+                            <!-- <h5 [style.backgroundColor]="productdet.color" class="productshape"></h5> -->
                         </div>
-                    </div>
+                        <div class="col-md-6">
                     <h1 class="text-center"><b>PRICE : {{productdet.price |currency:'INR'}}</b></h1>
+                        </div>
+                        <div class="col-md-6 mx-auto ">
+                            <button type="button" class="btn btn-primary mx-1" (click)="productQauntity('min')">-</button>
+                            <input type="text" value="{{QuantityofProduct}}">
+                            <button type="button" class="btn btn-primary mx-1" (click)="productQauntity('plus')">+</button>
+                          </div>
+                    </div>
             </mat-card-content><hr>
-                <button type="button" class="d-block mx-auto" mat-stroked-button color="primary">ADD TO CART</button>
+                <mat-card-footer class=" my-3 d-flex justify-content-between ">
+                    <button *ngIf="!removeCart" type="button" class="mx-auto" mat-stroked-button color="primary" (click)="addToCart()">ADD TO CART</button>
+                    <button *ngIf="removeCart" type="button" class="mx-auto" mat-stroked-button color="warn" (click)="removecart(productdet.id)" >Remove from cart</button>
+                <button type="button" class="mx-auto" mat-stroked-button color="primary">Buy Now</button>
+                </mat-card-footer>
           </mat-card>
         </div>
     </div>
